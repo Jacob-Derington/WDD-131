@@ -1,0 +1,29 @@
+body{
+    background-color: lightgrey;
+}
+
+p, hr{
+    color: blue;
+}
+
+hr{
+    background-color: blue;
+    border-color: blue;
+    max-width: 500px;
+}
+
+#content{
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    border: 1.5px groove gray;
+    padding: 10px;
+}
+
+.list{
+    list-style-type: none;
+    text-align: center;
+    display: grid;
+    font-size: large;
+    /* width: 360px; */
+}
