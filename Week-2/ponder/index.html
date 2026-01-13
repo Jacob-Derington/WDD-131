@@ -100,20 +100,29 @@
         if (codeValue == "html") {
             document.getElementById("css").style.backgroundColor = "lightgrey";
             document.getElementById("js").style.backgroundColor = "lightgrey";
+            document.getElementById("css").style.fontStyle = "normal";
+            document.getElementById("js").style.fontStyle = "normal";
             document.getElementById("html").style.backgroundColor = "black";
             document.getElementById("html").style.color = "white";
+            document.getElementById("html").style.fontStyle = "italic";
         }
         else if (codeValue == "css") {
             document.getElementById("html").style.backgroundColor = "lightgrey";
             document.getElementById("html").style.color = "black";
             document.getElementById("js").style.backgroundColor = "lightgrey";
+            document.getElementById("html").style.fontStyle = "normal";
+            document.getElementById("js").style.fontStyle = "normal";
             document.getElementById("css").style.backgroundColor = '#00b4d8';
+            document.getElementById("css").style.fontStyle = "italic";
         }
         else if (codeValue == "js") {
             document.getElementById("html").style.backgroundColor = "lightgrey";
             document.getElementById("html").style.color = "black";
+            document.getElementById("html").style.fontStyle = "normal";
+            document.getElementById("css").style.fontStyle = "normal";
             document.getElementById("css").style.backgroundColor = "lightgrey";
             document.getElementById("js").style.backgroundColor = "yellow";
+            document.getElementById("js").style.fontStyle = "italic";
             // document.getElementById("js").style.color = "white";
         }
         else {
@@ -121,6 +130,9 @@
             document.getElementById("html").style.color = "black";
             document.getElementById("css").style.backgroundColor = "lightgrey";
             document.getElementById("js").style.backgroundColor = "lightgrey";
+            document.getElementById("html").style.fontStyle = "normal";
+            document.getElementById("css").style.fontStyle = "normal";
+            document.getElementById("js").style.fontStyle = "normal";
         }
 
     })  
