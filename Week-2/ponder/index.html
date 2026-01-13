@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let selectElem = document.getElementById('webdevlist');
+        selectElem.addEventListener('change', function(){
+            let codeValue = selectElem.value;
+            console.log(codeValue);
+        })  
+    </script>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+	 <style>
+		body{
+			background-color: lightgrey;
+		}
+
+		p, hr{
+			color: blue;
+		}
+
+		hr{
+			background-color: blue;
+			border-color: blue;
+			max-width: 500px;
+		}
+
+		#content{
+			max-width: 800px;
+			margin: 0 auto;
+			text-align: center;
+			border: 1.5px groove gray;
+			padding: 30px;
+		}
+
+		p{
+			font-size: 20px;
+		}
+
+		.list{
+			list-style-type: none;
+			text-align: left;
+			display: grid;
+			font-size: large;
+			width: 360px;
+			/* max-width: 50%; */
+			margin: 0 auto 20px;
+		}
+
+        #webdevlist{
+            text-align: left;
+            margin: auto;
+        }
+        
+	 </style>
+</head>
+<body>
+    
+    <div id="content">
+        <h1>HTML, CSS, and JS</h1>
+        <p>The foundational technologies that power websites and web applications</p>
+        <hr>
+        <img src="https://wddbyui.github.io/wdd131/images/trifecta.png" alt="JS, CSS, and HTML logos">
+        <div id="topics">
+            <h2>HyperText Markup Language</h2>
+            <ul class="list">
+                <li>Defines the structure and content of a web page.</li>
+                <li>Without HTML there's nothing for the browser to display.</li>
+            </ul>
+            <h2>Cascading Style Sheets</h2>
+            <ul class="list">
+                <li>Controls how the HTML elements look.</li>
+                <li>Without CSS pages look plain and unstyled.</li>
+            </ul>
+            <h2>JavaScript</h2>
+            <ul class="list">
+                <li>Adds interactivity and dynamic behavior.</li>
+                <li>Without JavaScript nothing on the page responds dynamically to user actions.</li>
+            </ul>
+        </div>
+        <label for="webdevlist">Choose One:</label>
+        <select name="code" id="webdevlist">
+            <option>Choose One:</option>
+            <option value="html">HTML</option>
+            <option value="css">CSS</option>
+            <option value="js">JavaScript</option>
+        </select>
+    </div>
+                    
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+<script src="week1.js"></script>
+</body>
+</html>
