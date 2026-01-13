@@ -4,13 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script>
-        let selectElem = document.getElementById('webdevlist');
-        selectElem.addEventListener('change', function(){
-            let codeValue = selectElem.value;
-            console.log(codeValue);
-        })  
-    </script>
+    
     <!-- <link rel="stylesheet" href="style.css"> -->
 	 <style>
 		body{
@@ -64,21 +58,30 @@
         <hr>
         <img src="https://wddbyui.github.io/wdd131/images/trifecta.png" alt="JS, CSS, and HTML logos">
         <div id="topics">
-            <h2>HyperText Markup Language</h2>
-            <ul class="list">
-                <li>Defines the structure and content of a web page.</li>
-                <li>Without HTML there's nothing for the browser to display.</li>
-            </ul>
-            <h2>Cascading Style Sheets</h2>
-            <ul class="list">
-                <li>Controls how the HTML elements look.</li>
-                <li>Without CSS pages look plain and unstyled.</li>
-            </ul>
-            <h2>JavaScript</h2>
-            <ul class="list">
-                <li>Adds interactivity and dynamic behavior.</li>
-                <li>Without JavaScript nothing on the page responds dynamically to user actions.</li>
-            </ul>
+            <div id="html">
+                <h2>HyperText Markup Language</h2>
+                <ul class="list">
+                    <li>Defines the structure and content of a web page.</li>
+                    <li>Without HTML there's nothing for the browser to display.</li>
+                </ul>
+            </div>
+
+            <div id="css">
+                <h2>Cascading Style Sheets</h2>
+                <ul class="list">
+                    <li>Controls how the HTML elements look.</li>
+                    <li>Without CSS pages look plain and unstyled.</li>
+                </ul>
+            </div>
+
+            <div id="js">
+                <h2>JavaScript</h2>
+                <ul class="list">
+                    <li>Adds interactivity and dynamic behavior.</li>
+                    <li>Without JavaScript nothing on the page responds dynamically to user actions.</li>
+                </ul>
+            </div>
+
         </div>
         <label for="webdevlist">Choose One:</label>
         <select name="code" id="webdevlist">
@@ -88,9 +91,37 @@
             <option value="js">JavaScript</option>
         </select>
     </div>
-                    
-<!-- Code injected by live-server -->
+     
 <script>
+    let selectElem = document.getElementById('webdevlist');
+    selectElem.addEventListener('change', function(){
+        let codeValue = selectElem.value;
+        console.log(codeValue);
+        if (codeValue == "html") {
+            document.getElementById("css").style.backgroundColor = "lightgrey";
+            document.getElementById("js").style.backgroundColor = "lightgrey";
+            document.getElementById("html").style.backgroundColor = "black";
+            document.getElementById("html").style.color = "white";
+        }
+        else if (codeValue == "css") {
+            document.getElementById("html").style.backgroundColor = "lightgrey";
+            document.getElementById("html").style.color = "black";
+            document.getElementById("js").style.backgroundColor = "lightgrey";
+            document.getElementById("css").style.backgroundColor = '#00b4d8';
+        }
+        else if (codeValue == "js") {
+            document.getElementById("html").style.backgroundColor = "lightgrey";
+            document.getElementById("html").style.color = "black";
+            document.getElementById("css").style.backgroundColor = "lightgrey";
+            document.getElementById("js").style.backgroundColor = "yellow";
+            // document.getElementById("js").style.color = "white";
+        }
+
+    })  
+</script>
+
+<!-- Code injected by live-server -->
+<!-- <script>
 	// <![CDATA[  <-- For SVG support
 	if ('WebSocket' in window) {
 		(function () {
@@ -126,7 +157,8 @@
 		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
 	}
 	// ]]>
-</script>
-<script src="week1.js"></script>
+</script> -->
+
+<!-- <script src="week1.js"></script> -->
 </body>
 </html>
