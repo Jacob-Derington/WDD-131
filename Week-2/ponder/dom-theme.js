@@ -14,7 +14,7 @@ function changeTheme() {
         document.body.style.backgroundImage = "url('https://wddbyui.github.io/wdd131/images/forest.jpg')";
         pageContent.style.fontFamily = "Impact, sans-serif";
         pageContent.style.fontSize = "3rem";
-        pageContent.style.fontStyle = "normal";
+        pageContent.style.fontStyle = "italic";
     } else if (current === 'desert') {
         document.body.style.backgroundImage = "url('https://wddbyui.github.io/wdd131/images/desert.jpg')";
         pageContent.style.fontFamily = "'Big Caslon', serif";
