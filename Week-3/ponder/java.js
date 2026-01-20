@@ -1,1 +1,1 @@
-let selectElem = dispatchEvent('menu-btn');
+let selectElem = ('menu-btn');

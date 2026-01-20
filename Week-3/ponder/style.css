@@ -58,6 +58,12 @@ footer {
     .menu-btn{
         display: none;
     }
-    
+    main{
+        /* display: grid; */
+        grid-template-columns: 1fr auto;
+
+        display: flex;
+
+    }
 }
           
