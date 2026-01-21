@@ -45,7 +45,7 @@ nav a:hover {
 footer {
     text-align: center;
 }
-          
+
 @media screen and (min-width: 700px) {
     nav {
         display: flex;
@@ -59,11 +59,9 @@ footer {
         display: none;
     }
     main{
-        /* display: grid; */
-        grid-template-columns: 1fr auto;
-
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 
     }
+
 }
-          
