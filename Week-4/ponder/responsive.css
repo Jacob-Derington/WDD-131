@@ -78,12 +78,12 @@ footer {
 
 .open .bar1 {
   transform: translate(0, 9.5px) rotate(-45deg);
-  transition: 1.25s;
+  transition: 1s;
 }
-.open .bar2 {opacity: 0; transition: 1s;}
+.open .bar2 {opacity: 0; transition: .5s;}
 
 .open .bar3 {
   transform: translate(0, -9.5px) rotate(45deg);
-  transition: 1.25s;
+  transition: 1s;
 }
           
