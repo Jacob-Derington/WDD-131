@@ -26,17 +26,29 @@ window.addEventListener('resize', function() {
 });
 
 const btn = document.querySelector('.menu-btn');
+const nav = document.querySelector('nav');
 
+console.log(nav)
 console.log(btn);
 
 btn.addEventListener('click', function(){
     console.log('button clicked');
     btn.classList.toggle('open');
-})
+});
 
 window.addEventListener('resize', function() {
     const width = window.innerWidth;
     if (width >= 700) {
         btn.classList.remove('open');
+    }
+});
+
+btn.addEventListener('click', () => {
+    nav.classList.toggle('active');
+});
+
+window.addEventListener('resize', () => {
+    if (window.innerWidth >= 700) {
+        nav.classList.remove('active');
     }
 });

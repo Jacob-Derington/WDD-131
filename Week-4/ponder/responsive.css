@@ -24,6 +24,12 @@ section {
   margin: 1em;
   border: 1px solid #ccc;
 }
+nav.active a {
+    border-top: 2.5px solid #ccc;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
 nav a {
     padding: 20px;
     color: black;
@@ -43,6 +49,7 @@ nav a:hover {
     height: 4px;
     background-color: black;
     margin: 5px 0;
+    transition: 1s;
 }
 footer {
     text-align: center;
@@ -69,13 +76,14 @@ footer {
     }
 }
 
-
 .open .bar1 {
   transform: translate(0, 9.5px) rotate(-45deg);
+  transition: 1.25s;
 }
-.open .bar2 {opacity: 0;}
+.open .bar2 {opacity: 0; transition: 1s;}
 
 .open .bar3 {
   transform: translate(0, -9.5px) rotate(45deg);
+  transition: 1.25s;
 }
           
