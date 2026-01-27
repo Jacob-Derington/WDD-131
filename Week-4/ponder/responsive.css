@@ -68,4 +68,14 @@ footer {
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
-                
+
+
+.open .bar1 {
+  transform: translate(0, 8px) rotate(-45deg);
+}
+.open .bar2 {opacity: 0;}
+
+.open .bar3 {
+  transform: translate(0, -8px) rotate(45deg);
+}
+          
