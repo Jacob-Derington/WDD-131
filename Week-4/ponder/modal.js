@@ -10,7 +10,12 @@ gallery.addEventListener('click', openModal);
 function openModal(e) {
     
 // Code to show modal  - Use event parameter 'e'   
-    
+    if(e.target.tagName != 'IMG'){
+        console.log('SKIP');
+        return;
+    }
+    modalImage.src = e.target.src.replace('-sm.','-full.');
+    modal.showModal();
 }
 // Close modal on button click
 closeButton.addEventListener('click', () => {
