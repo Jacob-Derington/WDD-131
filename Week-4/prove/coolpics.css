@@ -1,0 +1,123 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+                        
+img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+          
+body {
+  font-family: Roboto, sans-serif;
+  background-color: lightgrey;
+}
+header,
+footer {
+    color: white;
+    max-width: 1500px;
+    margin: auto;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    background-color: rgb(26, 94, 189);
+}
+main{
+    /* justify-content: center; */
+    max-width: 1300px;
+    margin: auto;
+    padding: 1rem;
+}
+h1, h2{
+    text-align: center;
+}
+section {
+    /* justify-content: center; */
+    max-width: 1000px;
+    padding-top: 36px;
+    width: 300px;
+    height: 300px;
+    padding: 10px;
+    background-color: white;
+    margin: auto;
+    margin-bottom: 25px;
+    border: 1px solid black;
+    filter: drop-shadow(5px 5px 10px black);
+}
+nav a {
+    padding: 20px;
+    color: white;
+    display: none;
+}
+nav.active a {
+    display: block;
+    text-align: center;
+}
+nav a:hover {
+    text-decoration: none;
+    color: #616061;
+}
+.menu-btn {
+    display: block;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    padding: 20px;
+    color: white;
+    font-size: 20px;
+    align-self: center;
+    margin: 0 auto;
+}
+/* .bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 4px;
+    background-color: black;
+    margin: 5px 0;
+} */
+footer {
+    text-align: center;
+}
+/* modal */
+
+dialog img {
+    width: 90%;
+    display: block;
+    margin: 20vh auto;
+}
+dialog {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.75);
+}
+.close-viewer {
+    position: absolute;
+    top: 10vh;
+    right: 2vh;
+    padding: 3px 6px;
+    font-size: 1.5em;
+}
+
+@media screen and (min-width: 700px) {
+    main{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    nav a {
+        display: flex;
+    }
+    .menu-btn{
+        display: none;
+    }
+    main {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
