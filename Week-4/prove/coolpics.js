@@ -11,7 +11,7 @@ window.addEventListener('resize', () => {
     }
 })
 
-const gallery = document.querySelector('.gallery');
+const gallery = document.querySelector('main');
 const modal = document.querySelector('dialog');
 const modalImage = modal.querySelector('img');
 const closeButton = modal.querySelector('.close-viewer');
