@@ -1,0 +1,1 @@
+const allRatingE = document.querySelectorAll('article.movie p span');
