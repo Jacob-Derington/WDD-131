@@ -12,4 +12,7 @@ allRatingE.forEach((elem) => {
 
 // const spans = document.querySelectorAll('article.movie p span')
 
-// spans.forEach(addStars)
+// // spans.forEach(addStars)
+// for(let i = 0; i < spans.length; i++){
+//     addStars(spans[i]);
+// }
