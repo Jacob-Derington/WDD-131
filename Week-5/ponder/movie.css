@@ -52,7 +52,28 @@ header, footer {
 }
 
 @media (min-width: 600px) {
-    
+    .movie img {
+        grid-area: img;
+    }
+    h2{
+        grid-area: head;
+    }
+    .r-date{
+        grid-area: date;
+    }
+    .age{
+        grid-area: age;
+    }
+    .genre{
+        grid-area: gen;
+    }
+    .rating{
+        grid-area: rate;
+    }
+    .movie {
+        display: grid;
+        grid-template-areas: 'img head' 'img date' 'img age' 'img gen' 'img rate';
+    }
 
 }
           
