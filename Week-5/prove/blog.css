@@ -43,7 +43,7 @@ main {
 .book h2 {
     color: #b30059;
     font-size: 1.5rem;
-    text-align: center;
+    text-align: left;
     margin: 20px;
 }
 .book p {
@@ -57,30 +57,24 @@ main {
 }
 #desc {
     grid-column: 1/3;
+    text-align: left;
 }
 
 @media (min-width: 600px) {
-    .book img {
-        grid-area: img;
+    .left {
+        grid-area: left;
+        padding: 1rem;
     }
-    h2{
-        grid-area: head;
+    .right {
+        grid-area: right;
+        border-left: 2px solid #ffc107;
     }
-    .r-date{
-        grid-area: date;
+    #Book-list {
+        border-top: none;
     }
-    .age{
-        grid-area: age;
-    }
-    .genre{
-        grid-area: gen;
-    }
-    .rating{
-        grid-area: rate;
-    }
-    .movie {
+    .book {
         display: grid;
-        grid-template-areas: 'img head' 'img date' 'img age' 'img gen' 'img rate';
+        grid-template-areas: 'left right';
     }
 
 }
