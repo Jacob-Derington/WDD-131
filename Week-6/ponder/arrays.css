@@ -1,0 +1,9 @@
+h2 {
+    text-align: center;
+}
+
+p {
+    border-bottom: 2px solid;
+    text-align: center;
+    padding: 5px;
+}
