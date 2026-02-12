@@ -1,5 +1,4 @@
 
-
 // function addStars(span) {
 //     const stars = span.innerText.length;
 //     span.setAttribute('aria-label', `${stars} out of 5 stars`);
@@ -78,11 +77,8 @@ movies.forEach(movie => {
 });
         
 // const allRatingE = document.getElementById('section#movie-list article#movie p.rating span');
-const allRatingE = document.getElementById('article#movie p.rating span');
+const allRatingE = document.querySelectorAll('article.movie p span');
 
-RatingE.forEach((elem) => {
-    const rating = elem.innerText.length; 
-    elem.setAttribute('aria-label', `${rating} out of 5 stars`);
-
-    allRatingE.appendChild(rating)
+allRatingE.forEach((elem) => {
+    elem.setAttribute('aria-label', `${elem.innerText.length} out of 5 stars`);
 });
