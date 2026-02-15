@@ -14,6 +14,9 @@ h1, footer {
 nav, footer, #Book-list {
     border-top: 2px solid #ffc107;
 }
+footer {
+    border-bottom: 2px solid #ffc107;
+}
 main {
     padding-top: 3rem;
     border-width: 500px;
