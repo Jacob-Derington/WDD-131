@@ -57,12 +57,13 @@ function submitHandler(event) {
   const cardNum = cardNumber.value.trim();
   if (paymentSelect.value === 'creditCard') {
     // Check if it's numeric and valid in one go
+        const regx = /^\d{16}$/;
     
-      if (!/^\d{16}$/.test(cardNum)) {
-      errorMsg += 'Card number must be 16 digits\n';
-      } else if (!isCardNumberValid(cardNum)) {
-        errorMsg += 'Card number is not valid\n';
-      }
+        if (!regx.test(cardNum)) { //the ^ means the start of the string and the $ in this case means the end of the string. /^6\d{15}$/ or /^[3-8]\d{15}$/ are ways to implament certen name checks. A | is a brack between parts
+        errorMsg += 'Card number must be 16 digits\n';
+        } else if (!isCardNumberValid(cardNum)) {
+            errorMsg += 'Card number is not valid\n';
+        }
     
     //check date
     const expYear = Number(document.querySelector('#year').value);   
@@ -87,3 +88,9 @@ function submitHandler(event) {
   
 document.querySelector('#checkoutForm').addEventListener('submit', submitHandler)
           
+
+// const a = 5;
+// const b = true;
+// const c = 'hello';
+// const reg = /abc/; //remenber this line it makes reglong unnessasary. 
+// const reglong = new RegExp('abc'); 
