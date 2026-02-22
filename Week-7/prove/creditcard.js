@@ -70,7 +70,7 @@ function submitHandler(event) {
     const expMonth = Number(document.querySelector('#month').value);
     const currentDate = new Date()
 
-    if (2000 + expYear < currentDate.getFullYear() || (2000 + expYear === currentDate.getFullYear() && expMonth <= (currentDate.getMonth()))
+    if (2000 + expYear < currentDate.getFullYear() || (2000 + expYear === currentDate.getFullYear() && expMonth <= (currentDate.getMonth() + 1))
     ) {
         errorMsg += 'Card is expired\n';
     }

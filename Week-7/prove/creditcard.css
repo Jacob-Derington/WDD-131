@@ -1,0 +1,147 @@
+.card-wrapper {
+    position: relative;
+    width: 440px;
+    margin: 60px auto;
+}
+
+.card {
+    width: 440px;
+    height: 220px;
+    border-radius: 18px;
+    padding: 22px 25px;
+    box-sizing: border-box;
+    background: lightgrey;
+    color: black;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.front-card {
+    display: grid;
+    padding-top: 4px;
+
+    grid-template-areas:
+        "total emoji" 
+        "numlabel numlabel" 
+        "number number" 
+        "namelabel exp" 
+        "name exp"
+        ;
+
+    grid-template-columns: 260px auto;
+    /* grid-template-rows: auto auto auto auto auto; */
+
+    gap: 6px;
+    position: relative;
+    z-index: 2;
+}
+
+.back-card {
+    position: absolute;
+    top: 40px;
+    left: 100px;
+    z-index: 1;
+    background: lightgrey;
+    padding: 0;
+    padding-top: 20px;
+
+    display: grid;
+    grid-template-areas:
+        "stripe"
+        "cvc";
+
+    grid-template-rows: 60px 1fr;
+}
+
+.black-bar {
+    grid-area: stripe;
+    height: 35px;
+    width: 100%;
+    background: black;
+}
+
+.cvc-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-left: 20px;
+    gap: 10px;
+}
+
+#cardCVC input {
+    width: 60px;
+    height: 20px;
+}
+
+#cardCVC {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 6px;
+    grid-area: cvc;
+    padding: 20px;
+    padding-top: 40px;
+}
+
+.total {
+    grid-area: total;
+    font-weight: bold;
+}
+
+.emoji {
+    grid-area: emoji;
+    padding-left: 90px;
+    /* justify-self: end; */
+    /* font-size: 1.4rem; */
+}
+
+#creditCardNumber {
+    grid-area: number;
+}
+
+#creditCardLabel { 
+    grid-area: numlabel; 
+    width: 200px;
+} 
+
+label.fullName {
+    grid-area: namelabel;
+    width: 200px;
+}
+
+#cardExpiration {
+    grid-area: exp;
+    display: grid;
+    grid-template-columns: 40px 5fr 40px;
+    grid-template-rows: auto auto;
+    align-items: center;
+    gap: 15px;
+    width: 250px;
+    row-gap: 0;
+}
+
+#cardExpiration label { 
+    grid-column: 1 / 4; 
+}
+
+#month, #year {
+    width: 40px; 
+    height: 20px;
+}
+
+button {
+    position: relative;
+    display: block;
+    margin: 40px 0 0 600px;
+    padding: 10px 25px;
+    border-radius: 8px;
+    border: 1px solid #444;
+    background: white;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+
+}
+
+#creditCardNumber, #fullName { 
+    width: 250px; 
+    height: 20px;
+}
