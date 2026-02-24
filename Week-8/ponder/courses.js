@@ -1,3 +1,5 @@
+console.log("Try doing a CTRL + a and see what happens.");
+
 const aCourse = {
     code: 'CSE121b',
     name: 'Javascript Language',
@@ -38,3 +40,4 @@ document.querySelector("#enrollStudent").addEventListener("click", function () {
     const sectionNum = document.querySelector("#sectionNumber").value;
     aCourse.enrollStudent(sectionNum);
 });
+
