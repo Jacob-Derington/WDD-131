@@ -1,0 +1,17 @@
+body {
+    text-align: center;
+    color: white;
+    background-color: #495057;
+}
+
+*{
+    padding: 10px;
+}
+
+table{
+    margin: 0 auto;
+}
+
+footer{
+    color: #495057;
+}
