@@ -1,40 +1,55 @@
-const attacked = document.querySelector('#hit')
-const level = document.querySelector('#up')
-const levels = document.querySelector('#Level')
-const hp = document.querySelector('#Health')
+const attackedBtn = document.querySelector('#hit')
+const levelBtn = document.querySelector('#up')
+const levelText = document.querySelector('#Level')
+const healthText = document.querySelector('#Health')
+const classText = document.querySelector('#Class')
+
+const character = {
+  name: "Deseret Supernova",
+  class: "Abyssal Master",
+  level: 10000,
+  health: 1000000000,
+  maxHealth: 1000000000,
+  hitsTaken: 0,
+
+  attacked() {
+    this.hitsTaken++;
+    this.health -= 20;
+
+    if (this.hitsTaken === 5) {
+      this.health = 0;
+      alert(`${this.name} is tierd of your hits and has killed you.`);
+
+      this.health = this.maxHealth;
+      this.hitsTaken = 0;
+      this.render();
+      return;
+    }
 
 
-const aCourse = {
-    stats: [
-    { roomNum: 'STC 353', enrolled: 26}
-    ],
-    enrollStudent: function (sectionNum) {
-        // find the right section...Array.findIndex will work here
-        const sectionIndex = this.stats.findIndex(
-          (section) => section.sectionNum == sectionNum
-        );
-        if (sectionIndex >= 0) {
-          this.stats[sectionIndex].enrolled++;
-          renderstats(this.stats);
-        }
-      }
-  };
+    this.render();
+  },
 
-function sectionTemplate(section) {
-    return `<tr>
-      <td>${section.roomNum}</td>
-      <td>${section.enrolled}</td></tr>`
-}
+  levelUp() {
+    this.level += 1;
+    this.render();
+  },
 
-function renderstats(stats) {
-const html = stats.map(sectionTemplate);
-document.querySelector("#stats").innerHTML = html.join("");
-}
+  render() {
+    classText.textContent = `Class: ${this.class}`
+    levelText.textContent = `Level: ${this.level.toLocaleString()}`;
+    healthText.textContent = `Health: ${this.health.toLocaleString()}`;
+  }
+};
 
-renderstats(aCourse.stats);
-
-document.querySelector("#enrollStudent").addEventListener("click", function () {
-    const sectionNum = document.querySelector("#sectionNumber").value;
-    aCourse.enrollStudent(sectionNum);
+// Button Events
+attackedBtn.addEventListener("click", function () {
+  character.attacked();
 });
 
+levelBtn.addEventListener("click", function () {
+  character.levelUp();
+});
+
+// Initial render
+character.render();
