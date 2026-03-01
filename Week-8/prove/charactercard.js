@@ -11,6 +11,7 @@ const character = {
   health: 1000000000,
   maxHealth: 1000000000,
   hitsTaken: 0,
+  levelsGained: 0,
 
   attacked() {
     this.hitsTaken++;
@@ -18,7 +19,7 @@ const character = {
 
     if (this.hitsTaken === 5) {
       this.health = 0;
-      alert(`${this.name} is tierd of your hits and has killed you.`);
+      alert(`${this.name} is tierd of your attacks and has killed you.`);
 
       this.health = this.maxHealth;
       this.hitsTaken = 0;
@@ -32,7 +33,15 @@ const character = {
 
   levelUp() {
     this.level += 1;
+    this.maxHealth += 50000;
+    this.health += 50000;
     this.render();
+
+    this.levelsGained += 1;
+    if (this.levelsGained === 10){
+      alert(`Keep making me stronger.`)
+      this.levelsGained = 0;
+    }
   },
 
   render() {
