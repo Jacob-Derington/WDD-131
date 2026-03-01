@@ -38,7 +38,7 @@ const character = {
     this.render();
 
     this.levelsGained += 1;
-    if (this.levelsGained === 10){
+    if (this.levelsGained === 25){
       alert(`Keep making me stronger.`)
       this.levelsGained = 0;
     }
