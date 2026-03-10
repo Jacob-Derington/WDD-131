@@ -1,0 +1,18 @@
+body {
+    text-align: center;
+    color: white;
+    background-color: #495057;
+    padding: 50px;
+}
+
+* {
+    padding: 5px;
+}
+
+footer{
+    color: #495057;
+}
+
+h1 {
+    font-size: medium;
+}
