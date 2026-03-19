@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Creator Site Plan</title>
+    <link rel="stylesheet" href="siteplan.css">
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Character Library</a>
+    </nav>
+</header>
+
+<main>
+
+    <h1>Character Creator Site Plan</h1>
+    <p><strong>Jacob Derington</strong><br>WDD 131-1</p>
+
+    <hr>
+
+    <!-- Overview -->
+    <section>
+        <h2>Overview</h2>
+
+        <h3>Purpose</h3>
+        <p>
+            This website allows users to create and generate unique characters for storytelling and entertainment. 
+            Users can also browse and search a collection of saved characters, making it a useful tool for inspiration and organization.
+        </p>
+
+        <h3>Audience</h3>
+        <p>
+            The intended audience includes writers, gamers, and students who want to create or explore interesting characters. 
+            It is especially useful for users looking for quick inspiration or a way to store and manage their own character ideas.
+        </p>
+
+        <h3>Dynamic Elements</h3>
+        <p>
+            JavaScript will be used to create and manage dynamic content throughout the site. Users will be able to input 
+            character information and store it using localStorage, allowing data to persist even after the page is refreshed. 
+            The site will dynamically display saved characters and allow users to search or filter them. Additionally, 
+            JavaScript will update the page in real time when characters are added or selected. The site will also use 
+            event listeners to respond to user actions such as button clicks and search input.
+        </p>
+    </section>
+
+    <hr>
+
+    <!-- Branding -->
+    <section>
+        <h2>Branding</h2>
+
+        <h3>Website Logo</h3>
+        <img src="logo.png" alt="Character Creator Logo" width="250">
+    </section>
+
+    <hr>
+
+    <!-- Style Guide -->
+    <section>
+        <h2>Style Guide</h2>
+
+        <h3>Color Palette</h3>
+        <p>Palette URL: 
+            <a href="https://coolors.co/396e94-e7c24f-a43312-381d2a-aabd8c" target="_blank">
+                coolors palette
+            </a>
+        </p>
+
+        <ul>
+            <li><strong>Primary:</strong> #555555</li>
+            <li><strong>Secondary:</strong> #219ebc</li>
+            <li><strong>Accent 1:</strong> #5a189a</li>
+            <li><strong>Accent 2:</strong> #dbb42c</li>
+        </ul>
+
+        <h3>Typography</h3>
+        <p><strong>Heading Font:</strong> Orbitron</p>
+        <p><strong>Paragraph Font:</strong> Arial, sans-serif</p>
+
+        <h3>Normal paragraph example</h3>
+        <p>
+            This website provides an interactive way to create and manage unique characters. Users can quickly input 
+            details or generate ideas, making it a useful tool for storytelling, gaming, or creative projects.
+        </p>
+
+        <h3>Colored paragraph example</h3>
+        <p class="colored">
+            The character library allows users to search and explore saved characters easily. With dynamic updates 
+            and filtering options, users can quickly find and review character details in an organized way.
+        </p>
+    </section>
+
+    <hr>
+
+    <!-- Content -->
+    <section>
+        <h2>Content</h2>
+
+        <h3>Home Page (Character Creator)</h3>
+        <ul>
+            <li>Title: “Character Creator”</li>
+            <li>Short description: “Create and save unique characters”</li>
+            <li>Inputs:
+                <ul>
+                    <li>Name</li>
+                    <li>Role</li>
+                    <li>Trait</li>
+                    <li>Weakness</li>
+                    <li>About / Backstory</li>
+                </ul>
+            </li>
+            <li>Buttons:
+                <ul>
+                    <li>Add Character</li>
+                    <li>Generate Character (optional)</li>
+                </ul>
+            </li>
+            <li>Confirmation message when character is saved</li>
+        </ul>
+
+        <h3>Character Library Page</h3>
+        <ul>
+            <li>Title: “Character Library”</li>
+            <li>Features:
+                <ul>
+                    <li>Search bar (by name)</li>
+                    <li>Optional filter (by role)</li>
+                    <li>Display as cards or list</li>
+                </ul>
+            </li>
+            <li>Interaction:
+                <ul>
+                    <li>Click character to view details:
+                        <ul>
+                            <li>Name</li>
+                            <li>Role</li>
+                            <li>Trait</li>
+                            <li>Weakness</li>
+                            <li>About / Backstory</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <hr>
+
+    <!-- Wireframes -->
+    <section>
+        <h2>Wireframes</h2>
+
+        <h3>Home Page</h3>
+        <pre>
+[Navigation]
+
+[Title: Character Creator]
+
+[Name Input]
+[Role Input]
+[Trait Input]
+[Weakness Input]
+[About/Backstory Input]
+
+[Add Character Button]
+[Generate Button]
+
+[Confirmation Message]
+        </pre>
+
+        <h3>Character Library Page</h3>
+        <pre>
+[Navigation]
+
+[Title: Character Library]
+
+[Search Bar]
+
+[Character List]
+- Zara Vex
+- Eli Rowan
+
+[Selected Character Details]
+(Name, Role, Trait, Weakness, About)
+        </pre>
+    </section>
+
+</main>
+
+</body>
+</html>
