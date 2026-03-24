@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Final Project</title>
+    <link rel="stylesheet" href="final.css">
+    <script src="final.js" defer></script>
+</head>
+<body>
+    <header>
+    <img src="logo.png" alt="logo">
+        <nav>
+            <a href="final.html" class="nav-btn">Home</a>
+            <a href="characters.html" class="nav-btn">Character Library</a>
+            <a href="#about" class="nav-btn">About</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Character Creator</h1>
+        <p>Create and save a unique character</p>
+
+        <form id="character-form">
+            <h3>Name</h3>
+            <input type="text" id="name" placeholder="Name" required><br>
+            <h3>Role</h3>
+            <input type="text" id="role" placeholder="Role"><br>
+            <h3>Trait</h3>
+            <input type="text" id="trait" placeholder="Trait"><br>
+            <h3>Weakness</h3>
+            <input type="text" id="weakness" placeholder="Weakness"><br>
+            <h3>Backstory</h3>
+            <textarea id="aboutChar" placeholder="Backstory"></textarea><br>
+
+            <button type="submit">Add Character</button>
+        </form>
+
+        <section id="about">
+            <h2>About</h2>
+            <p>
+                This website allows users to create and manage unique characters for storytelling, gaming,
+                and creative projects. Characters are saved using localStorage so users can return and
+                continue working at any time.
+            </p>
+        </section>
+    </main>
+    <footer>©2026 Derington</footer>
+</body>
+</html>
