@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-    <img src="logo.png" alt="logo">
+    <img src="logo.png" alt="logo" width="200">
         <nav>
             <a href="final.html" class="nav-btn">Home</a>
             <a href="characters.html" class="nav-btn">Character Library</a>
@@ -22,16 +22,16 @@
         <p>Create and save a unique character</p>
 
         <form id="character-form">
-            <h3>Name</h3>
+            <label for="name">Name</label>
             <input type="text" id="name" placeholder="Name" required><br>
-            <h3>Role</h3>
+            <label for="role">Role</label>
             <input type="text" id="role" placeholder="Role"><br>
-            <h3>Trait</h3>
+            <label for="trait">Trait</label>
             <input type="text" id="trait" placeholder="Trait"><br>
-            <h3>Weakness</h3>
+            <label for="weakness">Weakness</label>
             <input type="text" id="weakness" placeholder="Weakness"><br>
-            <h3>Backstory</h3>
-            <textarea id="aboutChar" placeholder="Backstory"></textarea><br>
+            <label for="aboutChar">Backstory</label>
+            <textarea id="aboutChar" placeholder="Backstory" required></textarea><br>
 
             <button type="submit">Add Character</button>
         </form>
