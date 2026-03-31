@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="characters.css">
+    <script src="characters.js" defer></script>
 </head>
-<body>
+<body onload="loadCharacters()">
     <header>
-    <img src="logo.png" alt="logo" width="200">
+    <img src="logo.png" alt="Character Creator Logo" width="175">
         <nav>
             <a href="final.html" class="nav-btn">Home</a>
             <a href="characters.html" class="nav-btn">Character Library</a>
@@ -17,10 +20,14 @@
 
     <main>
 
+        <div id="characterList"></div>
 
+        <hr>
 
+        <div id="details">
+            <p>Select a character to view details</p>
+        </div>
 
-        
         <section id="about">
             <h2>About</h2>
             <p>
