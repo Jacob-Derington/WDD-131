@@ -1,11 +1,20 @@
+document.getElementById("character-form").addEventListener("submit", function(event) {
+    event.preventDefault(); // STOP page refresh
+    saveCharacter();
+});
+
 function saveCharacter() {
     // Get values
-    const name = document.getElementById("name").value;
-    const role = document.getElementById("role").value;
-    const trait = document.getElementById("trait").value;
-    const weakness = document.getElementById("weakness").value;
-    const about = document.getElementById("about").value;
+    const name = document.getElementById("name").value.trim();
+    const role = document.getElementById("role").value.trim();
+    const trait = document.getElementById("trait").value.trim();
+    const weakness = document.getElementById("weakness").value.trim();
+    const about = document.getElementById("aboutChar").value.trim();
 
+    if (!name){
+        document.getElementById("message").textContent = "Name is required!";
+        return;
+    }
     // Create object
     const character = {
         name,
@@ -27,10 +36,11 @@ function saveCharacter() {
     // Confirmation message
     document.getElementById("message").textContent = "Character saved!";
 
+    // document.getElementById("character-form").reset();
     // Clear inputs
     document.getElementById("name").value = "";
     document.getElementById("role").value = "";
     document.getElementById("trait").value = "";
     document.getElementById("weakness").value = "";
-    document.getElementById("about").value = "";
+    document.getElementById("aboutChar").value = "";
 }

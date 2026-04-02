@@ -18,8 +18,8 @@ header {
     background-color: #219ebc; /* Secondary */
     padding: 15px;
     display: flex;
-    justify-content: space-between;
-    text-align: center;
+    align-items: center;
+    position: relative;
 }
 
 header img {
@@ -27,7 +27,9 @@ header img {
 }
 
 nav {
-    margin-right: 20px;
+    flex: 1;
+    text-align: right;
+    margin-right: 50px;
 }
 
 .nav-btn {
@@ -111,3 +113,9 @@ label {
     font-weight: bold;
 }
 
+@media (max-width: 768px) {
+    nav {
+        flex: 1;
+        text-align: center;
+    }
+}

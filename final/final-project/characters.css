@@ -18,8 +18,8 @@ header {
     background-color: #219ebc; /* Secondary */
     padding: 15px;
     display: flex;
-    justify-content: space-between;
-    text-align: center;
+    align-items: center;
+    position: relative;
 }
 
 header img {
@@ -27,7 +27,9 @@ header img {
 }
 
 nav {
-    margin-right: 20px;
+    flex: 1;
+    text-align: right;
+    margin-right: 50px;
 }
 
 .nav-btn {
@@ -101,18 +103,55 @@ main {
     margin: 20px auto;
     padding: 10px;
 }
-
+.flex-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
 #characterList {
-    width: 40%;
-    float: left;
+    flex: 1 1 40%;
+   min-width: 250px;
 }
 
 #details {
-    width: 55%;
-    float: right;
+    flex: 1 1 55%;
     background: #222;
     padding: 15px;
     border-radius: 10px;
+    min-width: 250px;
+}
+
+#details label {
+    margin-top: 10px;
+    font-weight: bold;
+    display: block;
+}
+
+#details input, 
+#details textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    background-color: #000;
+    color: #f5f5f5;
+}
+
+#details textarea {
+    resize: vertical;
+    min-height: 60px;
+}
+
+/* Buttons side by side */
+#details button {
+    width: 48%;
+    margin-top: 15px;
+    margin-right: 4%;
+}
+
+#details button:last-child {
+    margin-right: 0;
 }
 
 .card:hover {
@@ -123,4 +162,47 @@ main {
 
 section {
     margin-top: 20px;
+}
+
+#searchInput {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    border: 2px solid #219ebc;
+    outline: none;
+    font-size: 1rem;
+    background-color: #222;
+    color: #f5f5f5;
+}
+
+#searchInput:focus {
+    border-color: #5a189a;
+    box-shadow: 0 0 8px #5a189a;
+}
+
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column; /* stack list + details vertically */
+    }
+
+    #characterList, #details {
+        flex: 1 1 100%;
+    }
+
+    #details .form-row {
+        display: flex;
+        gap: 20px;
+    }
+
+    #details .form-row input,
+    #details .form-row textarea {
+        flex: 1;
+    }
+
+    nav {
+        flex: 1;
+        text-align: center;
+    }
 }
